@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORION | Cosmic Handcrafted Scent For You</title><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"><style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+/* COSMIC BACKGROUND */
+
+.space{
+position:fixed;
+inset:0;
+z-index:-10;
+overflow:hidden;
+background:
+radial-gradient(circle at top,#130022 0%,#050505 45%,#000 100%);
+}
+
+.nebula1,
+.nebula2{
+position:absolute;
+width:1200px;
+height:1200px;
+border-radius:50%;
+filter:blur(120px);
+}
+
+.nebula1{
+background:rgba(255,215,0,.12);
+top:-300px;
+left:-300px;
+animation:float1 25s ease-in-out infinite;
+}
+
+.nebula2{
+background:rgba(127,0,255,.18);
+bottom:-400px;
+right:-300px;
+animation:float2 35s ease-in-out infinite;
+}
+
+.stars{
+position:absolute;
+inset:0;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:40px 40px;
+opacity:.3;
+}
+
+@keyframes float1{
+50%{
+transform:translate(100px,50px);
+}
+}
+
+@keyframes float2{
+50%{
+transform:translate(-120px,-80px);
+}
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.logo-symbol{
+font-size:40px;
+margin-bottom:10px;
+color:#ffd700;
+}
+
+.logo{
+font-family:'Orbitron',sans-serif;
+font-size:90px;
+font-weight:800;
+letter-spacing:10px;
+background:
+linear-gradient(90deg,#ffd700,#ffffff,#c18cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.tagline{
+margin-top:15px;
+letter-spacing:3px;
+font-size:15px;
+opacity:.8;
+}
+
+.hero-text{
+margin-top:30px;
+font-size:18px;
+line-height:1.9;
+opacity:.85;
+max-width:720px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.hero-buttons{
+margin-top:40px;
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+text-decoration:none;
+padding:15px 24px;
+border-radius:14px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-primary{
+background:linear-gradient(90deg,#7f00ff,#00d4ff);
+color:white;
+}
+
+.btn-secondary{
+border:1px solid rgba(255,255,255,.2);
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* SECTION */
+
+.section{
+padding:100px 20px;
+}
+
+.section-title{
+text-align:center;
+font-family:'Orbitron';
+font-size:38px;
+letter-spacing:4px;
+margin-bottom:60px;
+}
+
+/* PRODUCTS */
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.card{
+width:340px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:26px;
+padding:30px;
+backdrop-filter:blur(15px);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(127,0,255,.25);
+}
+
+.scent-name{
+font-family:'Orbitron';
+font-size:28px;
+margin-bottom:10px;
+}
+
+.volume{
+color:#ffd700;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.description{
+opacity:.85;
+line-height:1.8;
+min-height:120px;
+}
+
+.price{
+margin-top:18px;
+font-size:28px;
+font-weight:700;
+color:#00d4ff;
+}
+
+.order-btn{
+display:inline-block;
+margin-top:20px;
+text-decoration:none;
+color:white;
+padding:12px 18px;
+border-radius:12px;
+background:linear-gradient(90deg,#7f00ff,#00d4ff);
+}
+
+/* WHY ORION */
+
+.why{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.feature{
+width:260px;
+padding:28px;
+border-radius:22px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+text-align:center;
+}
+
+.feature h3{
+margin-bottom:12px;
+font-family:'Orbitron';
+font-size:16px;
+}
+
+.feature p{
+opacity:.8;
+line-height:1.8;
+}
+
+/* STORY */
+
+.story{
+max-width:900px;
+margin:auto;
+text-align:center;
+line-height:2;
+opacity:.85;
+font-size:17px;
+}
+
+/* FOOTER */
+
+footer{
+padding:60px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+opacity:.6;
+}
+
+/* CHAT */
+
+.chat{
+position:fixed;
+bottom:20px;
+right:20px;
+text-decoration:none;
+padding:14px 18px;
+border-radius:999px;
+background:linear-gradient(90deg,#7f00ff,#00d4ff);
+color:white;
+font-weight:600;
+box-shadow:0 0 25px rgba(127,0,255,.4);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.logo{
+font-size:58px;
+letter-spacing:4px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.hero-text{
+font-size:16px;
+}
+
+.card{
+width:92%;
+}
+
+}
+
+</style></head><body><div class="space">
+<div class="nebula1"></div>
+<div class="nebula2"></div>
+<div class="stars"></div>
+</div><section class="hero"><div class="hero-content"><div class="logo-symbol">☾ ✦</div><h1 class="logo">ORION</h1><div class="tagline">
+COSMIC HANDCRAFTED SCENT FOR YOU
+</div><p class="hero-text">
+Welcome to the ORION universe.
+A fragrance brand inspired by galaxies, celestial beauty,
+and the mystery of the stars.
+Each scent is handcrafted to transform an ordinary moment
+into a journey across the cosmos.
+</p><div class="hero-buttons"><a href="#collection" class="btn btn-primary">
+Explore Collection
+</a><a href="#story" class="btn btn-secondary">
+Our Story
+</a></div></div></section><section class="section" id="collection"><h2 class="section-title">
+THE COLLECTION
+</h2><div class="products"><div class="card"><div class="scent-name">
+BREEZE
+</div><div class="volume">
+30 mL Eau de Parfum
+</div><div class="description">
+A smooth blend of sweetness and warmth.
+Inspired by drifting starlight and soft cosmic winds,
+Breeze is comforting, elegant, and effortlessly inviting.
+</div><div class="price">
+$4.99
+</div><a class="order-btn"
+href="https://wa.me/628133030489?text=Hello%20I%20would%20like%20to%20order%20ORION%20Breeze"
+target="_blank">
+Order Now
+</a>
+
+</div><div class="card"><div class="scent-name">
+ECLIPSE
+</div><div class="volume">
+30 mL Eau de Parfum
+</div><div class="description">
+Dark, luxurious, and mysterious.
+Eclipse captures the powerful beauty of light
+meeting shadow in a fragrance designed to stand out.
+</div><div class="price">
+$4.99
+</div><a class="order-btn"
+href="https://wa.me/628133030489?text=Hello%20I%20would%20like%20to%20order%20ORION%20Eclipse"
+target="_blank">
+Order Now
+</a>
+
+</div><div class="card"><div class="scent-name">
+MAGNETICO
+</div><div class="volume">
+30 mL Eau de Parfum
+</div><div class="description">
+Fresh cosmic energy with irresistible attraction.
+Confident, vibrant, and designed for those who naturally draw attention.
+</div><div class="price">
+$4.99
+</div><a class="order-btn"
+href="https://wa.me/628133030489?text=Hello%20I%20would%20like%20to%20order%20ORION%20Magnetico"
+target="_blank">
+Order Now
+</a>
+
+</div></div></section><section class="section"><h2 class="section-title">
+WHY ORION
+</h2><div class="why"><div class="feature">
+<h3>✦ HANDCRAFTED</h3>
+<p>
+Made in small batches with attention to detail and consistency.
+</p>
+</div><div class="feature">
+<h3>✦ GALAXY INSPIRED</h3>
+<p>
+Every fragrance carries a unique celestial identity.
+</p>
+</div><div class="feature">
+<h3>✦ 30 mL EDP</h3>
+<p>
+Designed for everyday wear while remaining travel friendly.
+</p>
+</div></div></section><section class="section" id="story"><h2 class="section-title">
+OUR STORY
+</h2><div class="story">ORION began with a simple vision:
+to create fragrances that feel larger than life.
+
+Instead of following trends,
+we looked beyond the horizon and into the stars.
+
+From the comforting warmth of Breeze,
+to the mysterious depth of Eclipse,
+to the magnetic freshness of Magnetico,
+every fragrance represents a different corner of the universe.
+
+ORION is more than a scent.
+
+It is a journey.
+
+</div></section><footer>ORION © 2026<br>
+Cosmic Handcrafted Scent For You
+
+</footer><a class="chat"
+href="https://wa.me/628133030489"
+target="_blank">
+💬 Chat With ORION
+</a>
+
+</body>
+</html>
