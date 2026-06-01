@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORION | Cosmic Fragrance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:black;
+    color:white;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+}
+
+/* 🌌 PARALLAX */
+.parallax{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-3;
+    overflow:hidden;
+}
+
+.layer1,.layer2,.layer3{
+    position:absolute;
+    width:200%;
+    height:200%;
+}
+
+.layer1{
+    background:
+    radial-gradient(circle at 20% 20%, rgba(120,0,255,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(0,200,255,0.12), transparent 45%);
+    animation:driftSlow 60s linear infinite;
+}
+
+.layer2{
+    background:
+    radial-gradient(circle at 40% 60%, rgba(255,0,200,0.08), transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(0,255,255,0.08), transparent 55%);
+    animation:driftMid 40s linear infinite;
+}
+
+.layer3{
+    background-image:radial-gradient(white 1px, transparent 1px);
+    background-size:50px 50px;
+    opacity:0.25;
+    animation:driftFast 25s linear infinite;
+}
+
+@keyframes driftSlow{
+    from{transform:translate(0,0);}
+    to{transform:translate(-5%,-5%);}
+}
+
+@keyframes driftMid{
+    from{transform:translate(0,0);}
+    to{transform:translate(-10%,5%);}
+}
+
+@keyframes driftFast{
+    from{transform:translate(0,0);}
+    to{transform:translate(10%,-10%);}
+}
+
+/* 🌠 HERO */
+header{
+    text-align:center;
+    padding:110px 20px 50px;
+}
+
+h1{
+    font-family:'Orbitron';
+    font-size:58px;
+    letter-spacing:5px;
+    background:linear-gradient(90deg,#7f00ff,#00d4ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:
+        0 0 20px rgba(127,0,255,0.6),
+        0 0 40px rgba(0,212,255,0.3);
+}
+
+.subtitle{
+    opacity:0.75;
+    font-size:14px;
+    margin-top:10px;
+}
+
+.explore-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 22px;
+    border-radius:14px;
+    border:1px solid rgba(0,212,255,0.6);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.explore-btn:hover{
+    background:rgba(0,212,255,0.1);
+    transform:scale(1.05);
+}
+
+/* 🌌 SECTION */
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+/* 💎 CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:24px;
+    padding:24px;
+    margin:24px auto;
+    max-width:340px;
+    backdrop-filter:blur(12px);
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.5),
+        0 0 15px rgba(127,0,255,0.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:
+        0 0 35px rgba(0,212,255,0.25);
+}
+
+.card h2{
+    font-family:'Orbitron';
+    margin-bottom:10px;
+}
+
+/* 💲 PRICE */
+.price-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.price{
+    font-family:'Orbitron';
+    font-size:18px;
+    font-weight:600;
+    color:#00d4ff;
+    text-shadow:0 0 12px rgba(0,212,255,0.6);
+}
+
+.price-note{
+    margin-top:8px;
+    font-size:12px;
+    opacity:0.65;
+}
+
+/* 💎 ORDER BUTTON */
+.order-btn{
+    display:inline-block;
+    padding:12px 18px;
+    border-radius:12px;
+    background:linear-gradient(90deg,#7f00ff,#00d4ff);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(127,0,255,0.4);
+}
+
+.order-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(0,212,255,0.6);
+}
+
+/* 💬 CHAT BUTTON */
+.chat-btn{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    z-index:999;
+    background:linear-gradient(90deg,#7f00ff,#00d4ff);
+    color:white;
+    text-decoration:none;
+    padding:14px 18px;
+    border-radius:999px;
+    font-weight:600;
+    box-shadow:
+        0 0 20px rgba(127,0,255,0.5),
+        0 0 30px rgba(0,212,255,0.3);
+    transition:.3s;
+}
+
+.chat-btn:hover{
+    transform:scale(1.05);
+}
+
+/* 📱 MOBILE */
+@media(max-width:600px){
+
+    h1{
+        font-size:42px;
+        letter-spacing:3px;
+    }
+
+    .card{
+        max-width:88%;
+    }
+
+    .chat-btn{
+        bottom:18px;
+        right:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🌌 BACKGROUND -->
+<div class="parallax">
+    <div class="layer1"></div>
+    <div class="layer2"></div>
+    <div class="layer3"></div>
+</div>
+
+<!-- 🌠 HERO -->
+<header>
+    <h1>ORION</h1>
+
+    <div class="subtitle">
+        handcrafted cosmic fragrance inspired by the stars
+    </div>
+
+    <a href="#products" class="explore-btn">
+        Explore ORION Universe
+    </a>
+</header>
+
+<!-- 🌌 PRODUCTS -->
+<div class="section" id="products">
+
+    <div class="card">
+        <h2>BREEZE</h2>
+
+        <p><strong>10 mL Eau de Parfum</strong></p>
+
+        <p>
+            Soft cosmic vanilla drifting through the stars.
+        </p>
+
+        <div class="price-row">
+            <span class="price">$4.99</span>
+
+            <a class="order-btn"
+            href="https://wa.me/628133030489?text=Halo%20saya%20ingin%20order%20ORION%20Breeze"
+            target="_blank">
+            Order Here
+            </a>
+        </div>
+
+        <div class="price-note">
+            Before tax & shipping
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>ECLIPSE</h2>
+
+        <p><strong>10 mL Eau de Parfum</strong></p>
+
+        <p>
+            Dark luxury fragrance with magnetic intensity.
+        </p>
+
+        <div class="price-row">
+            <span class="price">$4.99</span>
+
+            <a class="order-btn"
+            href="https://wa.me/628133030489?text=Halo%20saya%20ingin%20order%20ORION%20Eclipse"
+            target="_blank">
+            Order Here
+            </a>
+        </div>
+
+        <div class="price-note">
+            Before tax & shipping
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>MAGNETICO</h2>
+
+        <p><strong>10 mL Eau de Parfum</strong></p>
+
+        <p>
+            Fresh cosmic energy with irresistible attraction.
+        </p>
+
+        <div class="price-row">
+            <span class="price">$4.99</span>
+
+            <a class="order-btn"
+            href="https://wa.me/628133030489?text=Halo%20saya%20ingin%20order%20ORION%20Magnetico"
+            target="_blank">
+            Order Here
+            </a>
+        </div>
+
+        <div class="price-note">
+            Before tax & shipping
+        </div>
+    </div>
+
+</div>
+
+<!-- 💬 CHAT -->
+<a class="chat-btn"
+href="https://wa.me/628133030489"
+target="_blank">
+💬 Chat with ORION
+</a>
+
+</body>
+</html>
